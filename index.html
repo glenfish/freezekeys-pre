@@ -14,18 +14,16 @@
         /* align-items: flex-start; */
         min-height: 100vh;
         /* flex-direction: column; */
+        line-height: 1.75em;
       }
       #getWaitlistContainer {
         text-align: center;
         max-width: 90%;
         margin: 0 auto;
+        position: relative;
+        top: -30px;
       }
 
-      .getWaitlistContainer {
-        text-align: center;
-        max-width: 90%;
-        margin: 0 auto;
-      }
       #mastercontainer p {
         padding: 0 20px 20px 20px;
         max-width: 90%;
@@ -46,10 +44,17 @@
           font-size: 20px;
         }
       }
-
+      .center {
+        text-align: center;
+        margin: auto;
+        display: block;
+      }
       .logo {
         max-width: 98%;
-        margin-bottom: 5px; /* Adjusted margin to a fixed value or a percentage based on the logo height */
+        margin-top: 5px;
+        margin-bottom: 5px;
+        position: relative;
+        left: -5px;
       }
       #mastercontainer {
         max-width: 600px;
@@ -68,6 +73,15 @@
         justify-content: center;
         align-items: center;
       }
+      .bold {
+        font-weight: bold;
+      }
+      .blue {
+        color: #0a5bde;
+      }
+      h2 {
+        margin-left: 20px;
+      }
     </style>
   </head>
   <body>
@@ -85,10 +99,13 @@
           Harden & backup your crypto private keys offline by encoding them with
           your own unique cipher map. Level up your security.<br /><br />Protect
           Metamask private keys & paper wallets. Self-custody cold storage of
-          your private keys - Launching soon.
+          your private keys. <br /><br />
+          <span class="bold blue center"
+            >Launching soon. Join the waitlist</span
+          >
         </p>
       </div>
-      <div class="form"></div>
+
       <div
         id="getWaitlistContainer"
         data-waitlist_id="14179"
@@ -100,6 +117,38 @@
         href="https://prod-waitlist-widget.s3.us-east-2.amazonaws.com/getwaitlist.min.css"
       />
       <script src="https://prod-waitlist-widget.s3.us-east-2.amazonaws.com/getwaitlist.min.js"></script>
+
+      <div class="getWaitlistContainer">
+        <h2>How It Works</h2>
+        <p>
+          This offline-only browser-based tool uses algorithms that produce a
+          highly randomized pair of alphanumeric characters. Each pair
+          represents 1 character of your private key. It doesn't double your
+          security, it multiplies it by 3.101×10^97. It makes your encoded keys
+          unreadable and exponentially increases your backup security.
+          <br /><br />
+          This mapping is output in CSV format and used to encode private keys.
+          The encoded keys are stored in a separate file. It's an ultra-secure
+          way to produce a backup since neither file on its own reveals anything
+          about the original data.
+          <br /><br />
+          Optionally you can encrypt the CSV using a password, using 256-bit AES
+          encryption. These files should be split across multiple USB sticks and
+          stored in various safe, known locations. Create copies for redundancy.
+          This way, if one or more of the USB sticks are lost or damaged, you
+          can still recover your private keys.
+          <br /><br />
+          Only by recombining the cipher map and your encoded keys can you
+          decode them back to their original form. Not only does it make your
+          key storage highly resistant to theft, it also makes it easy to
+          recover your keys in the event of a disaster.
+          <br /><br />
+          This tool is designed to be used offline. It's a simple, secure way to
+          protect your private keys.
+          <br /><br /><br />
+          <span class="bold blue center">FreezeKeys.com &copy; 2024</span>
+        </p>
+      </div>
     </div>
   </body>
 </html>
