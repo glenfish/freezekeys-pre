@@ -75,6 +75,7 @@
       }
       .bold {
         font-weight: bold;
+        color: rgb(42, 42, 42);
       }
       .blue {
         color: #0a5bde;
@@ -83,9 +84,10 @@
         margin-left: 20px;
         padding-top: 20px;
       }
-      /* img {
-        border-radius: 10px;
-      } */
+      img {
+        max-width: 540px;
+        height: auto;
+      }
     </style>
   </head>
   <body>
@@ -123,11 +125,7 @@
         href="https://prod-waitlist-widget.s3.us-east-2.amazonaws.com/getwaitlist.min.css"
       />
       <script src="https://prod-waitlist-widget.s3.us-east-2.amazonaws.com/getwaitlist.min.js"></script>
-      <img
-        src="freezekeys-icecube.webp"
-        alt="FreezeKeys Ice Cube"
-        style="max-width: 100%; height: auto"
-      />
+      <img src="freezekeys-icecube.webp" alt="FreezeKeys Ice Cube" />
 
       <div class="getWaitlistContainer">
         <h1>How It Works</h1>
@@ -144,11 +142,12 @@
           full private keys. It makes your key storage highly resistant to
           theft, and easy to recover in the event of a disaster.
           <br /><br />
-          Offline. Secure. Easy. FreezeKeys.<br />Join Our Waitlist, Get It FREE
-          for life!<br />
-          <br />
+          <span class="center bold"
+            >Offline. Secure. Easy. FreezeKeys.<br />Join Our Waitlist, Get It
+            FREE for life!</span
+          >
           <br /><br />
-          <span class="bold center">FreezeKeys.com &copy; 2024</span>
+          <span class="center">FreezeKeys.com &copy; 2024</span>
         </p>
       </div>
     </div>
