@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FreezeKeys</title>
+    <style>
+      body {
+        background-color: #fff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        /* display: flex; */
+        /* align-items: flex-start; */
+        min-height: 100vh;
+        /* flex-direction: column; */
+        line-height: 2em;
+      }
+      #getWaitlistContainer {
+        text-align: center;
+        max-width: 90%;
+        margin: 0 auto;
+        position: relative;
+        top: -15px;
+      }
+
+      #mastercontainer p {
+        padding: 0 20px 20px 20px;
+        max-width: 90%;
+        font-size: 22px;
+      }
+      #freezekeys {
+        text-align: center;
+        height: auto; /* Let the height be dynamic based on content */
+        overflow: hidden;
+        max-height: 320px;
+      }
+
+      @media (max-width: 600px) {
+        #freezekeys {
+          height: auto; /* Adjust height as needed for smaller screens */
+        }
+        #mastercontainer p {
+          font-size: 20px;
+        }
+      }
+      .center {
+        text-align: center;
+        margin: auto;
+        display: block;
+      }
+      .logo {
+        max-width: 98%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        position: relative;
+        left: -5px;
+      }
+      #mastercontainer {
+        max-width: 600px;
+        margin: auto;
+        display: flex;
+        /* justify-content: space-between; */
+        align-items: center;
+        flex-direction: column;
+      }
+      .form {
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        background-color: #6e2525;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .bold {
+        font-weight: bold;
+        color: rgb(42, 42, 42);
+      }
+      .blue {
+        color: #0a5bde;
+      }
+      h1 {
+        margin-left: 20px;
+        padding-top: 20px;
+      }
+      img {
+        max-width: 280px;
+      }
+      .large {
+        font-size: 38px;
+        line-height: 48px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mastercontainer">
+      <div id="freezekeys">
+        <img
+          title="reset and reload page"
+          class="logo"
+          src="freezekeys-logo-blu.webp"
+          alt="FreezeKeys Logo"
+        />
+      </div>
+      <div class="getWaitlistContainer">
+        <p class="center">
+          Put your cold storage crypto key backups on ice. Level up your
+          security with your own unique keymap.<br /><br />Protect software
+          wallet private keys and paper wallets.
+          <span class="bold center"
+            >Self custody cold storage just got colder. FreezeKeys</span
+          >
+          <br />
+          <span class="bold blue center large"
+            >PRODUCTHUNT LAUNCH ON<br />MARCH 9TH AT 12:00AM</span
+          >
+        </p>
+      </div>
+
+      <img
+        src="freezekeys-icecube.webp"
+        alt="FreezeKeys Ice Cube"
+        style="max-width: 100%; height: auto"
+      />
+
+      <div class="getWaitlistContainer">
+        <h1>How It Works</h1>
+        <p>
+          Not your keys, not your crypto... right? We take that concept to the
+          next level.<br /><br />
+          This offline-only (browser-based) tool uses algorithms that produce a
+          highly randomized pair of alphanumeric characters. Each pair
+          represents 1 character of your private key. It doesn't double your
+          security, it <u>multiplies it</u> by 3.101×10^97. It makes your
+          encoded keys unreadable and exponentially increases your backup
+          security. Then we add 256-bit AES encryption on top.<br /><br />
+          Only by recombining the keymap and encoded keys can you reveal your
+          full private keys. It makes your key storage highly resistant to
+          theft, and easy to recover in the event of a disaster.
+          <br /><br />
+          <span class="center bold"
+            >Offline. Secure. Easy. FreezeKeys.<br />Join Our Waitlist<br />Get
+            It FREE for life!</span
+          >
+          <br />
+          <span class="center">FreezeKeys.com &copy; 2024</span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
