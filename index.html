@@ -3,11 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    >
     <title>FreezeKeys</title>
     <style>
       body {
         background-color: #fff;
-        font-family: Arial, sans-serif;
+        font-family: 'Roboto', Arial, sans-serif;
         margin: 0;
         padding: 0;
         /* display: flex; */
@@ -18,7 +24,6 @@
       }
       #getWaitlistContainer {
         text-align: center;
-        max-width: 90%;
         margin: 0 auto;
         position: relative;
         top: -15px;
@@ -27,7 +32,7 @@
       #mastercontainer p {
         padding: 0 20px 20px 20px;
         max-width: 90%;
-        font-size: 22px;
+        font-size: 21px;
       }
       #freezekeys {
         text-align: center;
@@ -78,15 +83,562 @@
         color: rgb(42, 42, 42);
       }
       .blue {
-        color: #0a5bde;
+        color: #004988;
       }
-      h1 {
-        margin-left: 20px;
-        padding-top: 20px;
+      .green {
+        color: #07ad9c;
       }
       img {
         max-width: 280px;
+        border-radius: 8px;
+
       }
+      .box {
+        padding: 10px;
+        border: 1px solid #73edfa;
+        border-radius: 8px;
+        background: radial-gradient(#ffffff,#ffffff );
+        /* background: radial-gradient(#3ecc9a, #31a89c); */
+        color: #222222;
+        margin: 5px;
+        max-width:90vw;
+      }
+
+      .pt-60 {
+        padding-top:60px;
+        
+      }
+      
+      .pt-40 {
+        padding-top:40px;
+        
+      }
+      .pt-20 {
+        padding-top:20px;
+        
+      }
+      .lrgr {
+        font-size: 46px;
+        line-height:48px!important;
+      }
+      .lrg {
+        font-size: 28px;
+        
+      }
+      .med {
+        font-size: 26px;
+        line-height:36px;
+        padding-top:30px;
+        padding-bottom:20px;
+      }
+      .sml {
+        font-size: 16px;
+        line-height:80%;
+      }
+
+      .nomobiles {
+        background-color: rgb(249, 249, 249);
+        color: rgb(32, 32, 32);
+        padding: 10px;
+        display: block;
+        border-radius:8px;
+        font-size:90%;
+      }
+      @media only screen and (max-width: 460px) {
+        /* Styles specific to mobile devices */
+        .lrgr {
+          font-size: 32px;
+        }
+      } 
+
+      .wrapper {
+  /* height: 100vh; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.ha-card {
+  position: relative;
+  margin: 0 10px 10px 10px;
+  background-color: transparent;
+}
+
+.ha-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  -webkit-box-shadow: 0 0 17px 3px #ffff01, 0 0 4px 2px #ffff01;
+  box-shadow: 0 0 17px 3px #ffff01, 0 0 4px 2px #ffff01;
+  z-index: -1;
+  -webkit-animation-name: half-yellow-shadow;
+  animation-name: half-yellow-shadow;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.ha-card::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  -webkit-box-shadow: 0 0 17px 3px #0ff, 0 0 4px 2px #0ff;
+  box-shadow: 0 0 17px 3px #0ff, 0 0 4px 2px #0ff;
+  z-index: -1;
+  -webkit-animation-name: half-cyan-shadow;
+  animation-name: half-cyan-shadow;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 10px;
+  position: relative;
+  z-index: 3;
+  padding: 20px;
+  background-color: #373737;
+  color: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.gradient-green {
+  background: radial-gradient(#000000,#00706b );
+}
+.gradient-pink {
+  background: radial-gradient(#000000,#6e0070 );
+}
+
+@-webkit-keyframes yellow-shadow {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 50%;
+    left: 0;
+  }
+  50% {
+    top: 50%;
+    left: 50%;
+  }
+  75% {
+    top: 0;
+    left: 50%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+@keyframes yellow-shadow {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 50%;
+    left: 0;
+  }
+  50% {
+    top: 50%;
+    left: 50%;
+  }
+  75% {
+    top: 0;
+    left: 50%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+@-webkit-keyframes cyan-shadow {
+  0% {
+    right: 0;
+    bottom: 0;
+  }
+  25% {
+    right: 0;
+    bottom: 50%;
+  }
+  50% {
+    right: 50%;
+    bottom: 50%;
+  }
+  75% {
+    right: 50%;
+    bottom: 0;
+  }
+  100% {
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@keyframes cyan-shadow {
+  0% {
+    right: 0;
+    bottom: 0;
+  }
+  25% {
+    right: 0;
+    bottom: 50%;
+  }
+  50% {
+    right: 50%;
+    bottom: 50%;
+  }
+  75% {
+    right: 50%;
+    bottom: 0;
+  }
+  100% {
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes gradient-shadow {
+  0% {
+    -webkit-box-shadow: 0 0 17px 3px #c586c0, 0 0 4px 2px #c586c0;
+    box-shadow: 0 0 17px 3px #c586c0, 0 0 4px 2px #c586c0;
+  }
+  20% {
+    -webkit-box-shadow: 0 0 17px 3px #0ff, 0 0 4px 2px #0ff;
+    box-shadow: 0 0 17px 3px #0ff, 0 0 4px 2px #0ff;
+  }
+  40% {
+    -webkit-box-shadow: 0 0 17px 3px #0f0, 0 0 4px 2px #0f0;
+    box-shadow: 0 0 17px 3px #0f0, 0 0 4px 2px #0f0;
+  }
+  60% {
+    -webkit-box-shadow: 0 0 17px 3px #ffff01, 0 0 4px 2px #ffff01;
+    box-shadow: 0 0 17px 3px #ffff01, 0 0 4px 2px #ffff01;
+  }
+  80% {
+    -webkit-box-shadow: 0 0 17px 3px #f00, 0 0 4px 2px #f00;
+    box-shadow: 0 0 17px 3px #f00, 0 0 4px 2px #f00;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 17px 3px #c586c0, 0 0 4px 2px #c586c0;
+    box-shadow: 0 0 17px 3px #c586c0, 0 0 4px 2px #c586c0;
+  }
+}
+
+@keyframes gradient-shadow {
+  0% {
+    -webkit-box-shadow: 0 0 17px 3px #c586c0, 0 0 4px 2px #c586c0;
+    box-shadow: 0 0 17px 3px #c586c0, 0 0 4px 2px #c586c0;
+  }
+  20% {
+    -webkit-box-shadow: 0 0 17px 3px #0ff, 0 0 4px 2px #0ff;
+    box-shadow: 0 0 17px 3px #0ff, 0 0 4px 2px #0ff;
+  }
+  40% {
+    -webkit-box-shadow: 0 0 17px 3px #0f0, 0 0 4px 2px #0f0;
+    box-shadow: 0 0 17px 3px #0f0, 0 0 4px 2px #0f0;
+  }
+  60% {
+    -webkit-box-shadow: 0 0 17px 3px #ffff01, 0 0 4px 2px #ffff01;
+    box-shadow: 0 0 17px 3px #ffff01, 0 0 4px 2px #ffff01;
+  }
+  80% {
+    -webkit-box-shadow: 0 0 17px 3px #f00, 0 0 4px 2px #f00;
+    box-shadow: 0 0 17px 3px #f00, 0 0 4px 2px #f00;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 17px 3px #c586c0, 0 0 4px 2px #c586c0;
+    box-shadow: 0 0 17px 3px #c586c0, 0 0 4px 2px #c586c0;
+  }
+}
+
+@-webkit-keyframes half-yellow-shadow {
+  0% {
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 50%;
+  }
+  16.66% {
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+  }
+  32.32% {
+    top: 0;
+    left: 50%;
+    height: 50%;
+    width: 50%;
+  }
+  49.98% {
+    top: 50%;
+    left: 50%;
+    height: 50%;
+    width: 50%;
+  }
+  66.64% {
+    top: 50%;
+    left: 0;
+    height: 50%;
+    width: 100%;
+  }
+  83.3% {
+    top: 50%;
+    left: 0;
+    height: 50%;
+    width: 50%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 50%;
+  }
+}
+
+@keyframes half-yellow-shadow {
+  0% {
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 50%;
+  }
+  16.66% {
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+  }
+  32.32% {
+    top: 0;
+    left: 50%;
+    height: 50%;
+    width: 50%;
+  }
+  49.98% {
+    top: 50%;
+    left: 50%;
+    height: 50%;
+    width: 50%;
+  }
+  66.64% {
+    top: 50%;
+    left: 0;
+    height: 50%;
+    width: 100%;
+  }
+  83.3% {
+    top: 50%;
+    left: 0;
+    height: 50%;
+    width: 50%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 50%;
+  }
+}
+
+@-webkit-keyframes half-cyan-shadow {
+  0% {
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    width: 50%;
+  }
+  16.66% {
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    width: 100%;
+  }
+  32.32% {
+    bottom: 0;
+    right: 50%;
+    height: 50%;
+    width: 50%;
+  }
+  49.98% {
+    bottom: 50%;
+    right: 50%;
+    height: 50%;
+    width: 50%;
+  }
+  66.64% {
+    bottom: 50%;
+    right: 0;
+    height: 50%;
+    width: 100%;
+  }
+  83.3% {
+    bottom: 50%;
+    right: 0;
+    height: 50%;
+    width: 50%;
+  }
+  100% {
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    width: 50%;
+  }
+}
+
+@keyframes half-cyan-shadow {
+  0% {
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    width: 50%;
+  }
+  16.66% {
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    width: 100%;
+  }
+  32.32% {
+    bottom: 0;
+    right: 50%;
+    height: 50%;
+    width: 50%;
+  }
+  49.98% {
+    bottom: 50%;
+    right: 50%;
+    height: 50%;
+    width: 50%;
+  }
+  66.64% {
+    bottom: 50%;
+    right: 0;
+    height: 50%;
+    width: 100%;
+  }
+  83.3% {
+    bottom: 50%;
+    right: 0;
+    height: 50%;
+    width: 50%;
+  }
+  100% {
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    width: 50%;
+  }
+}
+.glow {
+  border: #14cbb9 solid 15px;
+  display: inline-block;
+  margin:18px auto;
+  padding:0;
+  background-color: rgb(18, 18, 18);
+  min-width:244px;
+  max-width:472px;
+  border-radius:4px;
+}
+.audio {
+  margin-top:25px;
+  text-align:center;
+  margin: auto;
+}
+audio {
+  width: 90%;
+  margin-bottom:10px;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.gray {
+  color: #282828;
+}
+.highlight {
+  background-color: rgb(255, 255, 255);
+  display:inline-block;
+  padding: 20px;
+  line-height:26px;
+  border-radius: 8px;
+  border: solid 2px #33d4e6;
+}
+.banner {
+  background-color: rgb(255, 255, 255);
+  display:inline-block;
+  width: 100%;
+  padding:10px 0;
+  position:relative;
+  top:-20px;
+  border-radius: 8px;
+}
+h1::before {
+  content: "";
+  position: absolute;
+  left: 33%;
+  bottom: 16px;
+  width: 400px;
+  height: 14px;
+  transform: skew(-12deg) translateX(-50%);
+  
+  z-index: -1;
+}
+.underline-green::before {
+  background: rgba(4, 174, 186, 0.5);
+}
+.underline-pink::before {
+  background: rgba(153, 4, 186, 0.5);
+}
+.underline {
+  /* text-decoration: underline; */
+}
+.underline {
+  display: inline;
+  border-bottom: 3px solid rgba(4, 174, 186, 0.5);
+}
+.highlighter {  
+  background-color: #ffff01;
+  padding:2px;
+}
     </style>
   </head>
   <body>
@@ -99,39 +651,66 @@
           alt="FreezeKeys Logo"
         />
       </div>
-      <div class="getWaitlistContainer">
-        <p class="center">
-          Put your cold storage crypto key backups on ice. Level up your
-          security with your own unique keymap.<br /><br />Protect software
-          wallet private keys and paper wallets.
-          <span class="bold center"
-            >Self custody cold storage just got colder. FreezeKeys</span
-          ><br />
-          <span class="bold blue center"
-            >Launching March 2024<br />Get it FREE - Join the waitlist</span
+      
+       
+      
+      <div class="getWaitlistContainer wrapper">
+        
+        <p class="center">Hiding your private keys is <span class="underline">not a security plan.</span>  
+          Level up your crypto
+          security with your own unique keymap. Harden private keys and paper wallets.
+          <span class="bold center med pt-20 gray"
+            >Don't Lose Access To Your Crypto Wealth<br>
+            </span
           >
+          
+          <div class="box pt-60 ha-card">
+            <p class="center ">
+              <span class="green bold lrgr banner">PRODUCT HUNT<br>free offer is live!</span>
+              <span class="green">Please read these instructions before downloading</span><br><br><span class="nomobiles">For your security, this product will only run on laptops & desktops. No mobiles or tablets.</span>
+              <br>
+              <span class="sml">Click the green 'Provide email' button below and enter an email that you would like to receive your training and instructions to. Then click 'Unlock link'. You will receive an instant download of a zip file. Freezekeys runs inside your browser - it's a web-based tool. The zip file will be in your downloads folder. Double click on the file to unzip. Inside the FreezeKeys folder, double click on the 'openme.html' file. Disconnect your wifi or network connection before using FreezeKeys for your own security. We never share your email with anyone. <br><br><span class=" highlight"><span class="underline highlighter">Un-announced Special Bonus:</span> You'll get the exact steps to set up a free Deadman Switch, to pass your cryptos on after you're gone. Consider it your digital will, automated! PDF and video walkthrough delivered by email after you download.</span></span>
+            <div style=" border-radius:4px; margin: auto; text-align: center; width: 100%;" class="">
+              <div class="glow" style="  display: flex; justify-content: center; align-items: center; ">
+              <iframe
+                src="https://rekonise.com/private-key-backup-tool-y8xfi/embed"
+                width="100%"
+                height="440"
+                style="
+                  border: none;
+                  border-radius: 8px;
+                  min-width: 288px;
+                  width: 100vw;
+                  max-width: 480px;
+                  max-height: 435px;
+                  margin-top:30px;
+                "
+                
+              ></iframe>
+              </div>
+            </div>
+            
+            
+          
+          </div>
+        
+          
         </p>
+        
       </div>
-
-      <div
-        id="getWaitlistContainer"
-        data-waitlist_id="14179"
-        data-widget_type="WIDGET_2"
-      ></div>
-      <link
-        rel="stylesheet"
-        type="text/css"
-        href="https://prod-waitlist-widget.s3.us-east-2.amazonaws.com/getwaitlist.min.css"
-      />
-      <script src="https://prod-waitlist-widget.s3.us-east-2.amazonaws.com/getwaitlist.min.js"></script>
       <img
         src="freezekeys-icecube.webp"
         alt="FreezeKeys Ice Cube"
-        style="max-width: 100%; height: auto"
-      />
+        style="max-width: 96%; height: auto"
+      /><br><br>
+      
+
+
+      
 
       <div class="getWaitlistContainer">
-        <h1>How It Works</h1>
+        
+        <h1 class="underline-green gradient-green">How It Works</h1>
         <p>
           Not your keys, not your crypto... right? We take that concept to the
           next level.<br /><br />
@@ -141,15 +720,41 @@
           security, it <u>multiplies it</u> by 3.101×10^97. It makes your
           encoded keys unreadable and exponentially increases your backup
           security. Then we add 256-bit AES encryption on top.<br /><br />
-          Only by recombining the keymap and encoded keys can you reveal your
-          full private keys. It makes your key storage highly resistant to
+          Only by re-combining the decrypted keymap and encoded keys can you reveal your
+          original private keys. It makes your key storage massively resistant to
           theft, and easy to recover in the event of a disaster.
+        </p>
+        <br>
+        
+        <h1 class="underline-pink gradient-pink">FAQ's</h1>
+        <p>
+        <br />
+        
+          <span class="bold">Is this a techy nerdy thing? I don't have time for anything complicated.</span>
           <br /><br />
+          Absolutely not - it's a push-button process. If you can copy and paste and save files into folders, you're more than qualified. Besides, being a crypto holder pre-qualifies you to handle your own cold storage!<br><br>Once you're encoded and encrypted (which is a one-time process and very fast and easy) you can store your keymap and encoded keys on separate USB sticks, in different physical locations. We advise making a backup for redundancy. You can store your password in a password manager. 
+          </p>
+          <br>
+          <hr>
+          <p>
+          <br />
+          <span class="bold">Can I use FreezeKeys to backup hardware and software wallet seed phrases?</span>
+          <br /><br />
+          No, FreezeKeys is purpose-built for backing up private keys only such as paper wallets or Metamask private keys for example. We have another tool called <a href="https://EncryptFire.com" target="_blank">EncryptFire</a>  that will be released very soon, which is designed for backing up hardware and software wallets. FreezeKeys and EncryptFire are companion tools that work together to secure your crypto wealth.
+        </p>
+        <br>
+        <hr>
+        <p>
+        <br />
+        <span class="bold">When will I receive my PDF, video walkthrough and Deadman Switch instructions?</span>
+        <br /><br />
+        You will receive an email with the download link for the PDF and video walkthrough within 24 hours of downloading FreezeKeys. The Deadman Switch instructions will be a follow-up.<br><br>
+        Inside FreezeKeys there are step by step instructions for each task (encoding, decoding and storing to USB sticks). There are checkboxes next to each task so you can visially see where you're at in the process.
+          <br /><br /><br />
           <span class="center bold"
-            >Offline. Secure. Easy. FreezeKeys.<br />Join Our Waitlist<br />Get
-            It FREE for life!</span
+            >Offline. Secure. Easy. FreezeKeys.<br /></span
           >
-          <br /><br />
+          <br />
           <span class="center">FreezeKeys.com &copy; 2024</span>
         </p>
       </div>
