@@ -152,12 +152,7 @@
         border-radius:8px;
         font-size:90%;
       }
-      @media only screen and (max-width: 460px) {
-        /* Styles specific to mobile devices */
-        .lrgr {
-          font-size: 34px;
-        }
-      } 
+
 
       .wrapper {
   /* height: 100vh; */
@@ -654,6 +649,29 @@ h1::before {
   background-color: #ffff01;
   padding:2px;
 }
+.pb-10 {
+  line-height:34px;
+  margin-bottom:20px;
+  display:block;
+}
+.white {
+  color: white;
+}
+.indent {
+  padding-left: 20px;
+}
+.dynamiclinebreak {
+  display:inline-block;
+}
+@media  (max-width: 460px) {
+        /* Styles specific to mobile devices */
+        .lrgr {
+          font-size: 34px;
+        }
+        .dynamiclinebreak {
+        display:none;
+        }
+      } 
     </style>
   </head>
   <body>
@@ -671,15 +689,15 @@ h1::before {
       
       <div class="getWaitlistContainer wrapper">
         
-        <p class="center">Hiding your private keys is <span class="underline">not a security plan.</span>  
-          FreezeKeys gives you the tools to level up your crypto
-          security with your own unique keymap. FREE.</p>
-          <p class="center bold lrgr uppercase">Don't Lose Access To Your Crypto Wealth</p>  
+        <p class="center"><span class="bold lrg pb-10">Hiding your crypto private keys is <br class="dynamiclinebreak"><span class="underline">not a security plan</span></span>  
+          FreezeKeys gives you the tools to level up your crypto backup
+          security with your own unique keymap. Oh and it's free!</p>
+          <h1><span class="center bold lrgr uppercase white">Don't Lose Access To Your Crypto Wealth</span>  </h1>
           <div class="getWaitlistContainer">
             <p class="center">FreezeKeys makes your key storage massively resistant to
               theft, and easy to recover in the event of a disaster</p>
-        
-            <h1 class="underline-blue gradient-blue">How It Works</h1>
+        <hr>
+            <h2 class="indent lrg">How It Works</h2>
             <p>
               Not your keys, not your crypto... right? We take that concept to the
               next level.<br /><br />
