@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      import { Button, Modal, Text } from "geist/components";
+      import { useState } from "react";
+
+      export function Component(): JSX.Element {
+        const [open, setOpen] = useState(false);
+
+        return (
+          <>
+            <Button onClick={() => setOpen(true)} size="small">
+              Open Modal
+            </Button>
+
+            <Modal.Modal
+              active={open}
+              onClickOutside={() => setOpen(false)}
+              sticky
+            >
+              <Modal.Body>
+                <Modal.Header>
+                  <Modal.Title>Create Token</Modal.Title>
+                </Modal.Header>
+                <Text>Some content contained within the modal.</Text>
+              </Modal.Body>
+              <Modal.Actions>
+                <Modal.Action fullWidth onClick={() => setOpen(false)}>
+                  Cancel
+                </Modal.Action>
+              </Modal.Actions>
+            </Modal.Modal>
+          </>
+        );
+      }
+    </script>
+  </body>
+</html>
