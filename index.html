@@ -714,6 +714,21 @@ hr {
           margin: 0px;
         }
       } 
+      .responsive-video {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* Aspect ratio of 16:9 (9/16*100) */
+    width: 100%;
+}
+
+.responsive-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
     </style>
   </head>
   <body>
@@ -796,6 +811,7 @@ hr {
         <br>
         
       </div>
+    
       <img
         src="freezekeys-icecube.webp"
         alt="FreezeKeys Ice Cube"
@@ -836,6 +852,16 @@ hr {
         </p>
         <br>
         <hr>
+        <br>
+        <br>
+        <div class="responsive-video">
+          <iframe src="https://www.youtube.com/embed/XRVCpIjZLTM?si=ZJvJ5CmoLtZLkJuh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <br>   
+      <div class="responsive-video">
+        <iframe src="https://www.youtube.com/embed/xMPbRiEbprE?si=brN3XBDLBO36HNGD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <br>     
         <p>
         
           <br /><br /><br />
